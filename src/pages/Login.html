@@ -36,21 +36,24 @@
           <form action="">
             <div class="field-container">
               <label for="">E-mail</label>
-              <input type="text" placeholder="Your email" />
+              <input type="text" placeholder="Your email" class="email" name="email" value=""/>
+              <p class="error"></p>
             </div>
             <div class="field-container">
               <label for="">Password</label>
-              <input type="password" placeholder="Your password" />
+              <input type="password" placeholder="Your password" class="password" name="password" value="" />
+                 <p class="error"></p>
             </div>
           </form>
           <div class="continuebtn">
             <p>continue</p>
-            <a href="/src/pages/Dashboard.html"
-              ><i class="ri-arrow-right-long-line"></i
-            >
+            
+              <i class="ri-arrow-right-long-line"></i>
+  
           </div>
         </div>
       </div>
     </section>
+    <script src="/dist/typescript/login.js"></script>
   </body>
 </html>

@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend", sans-serif;
+  background-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 1;
+  margin: 10px;
+  width: 50%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: -1px -1px 1px 1px rgb(255, 11, 11);
+}
+
+.addfilters {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+}
+
+.addfiltersheading {
+  padding-left: 10px;
+  margin: 5px;
+  font-size: clamp(.55rem, 2vw, .9rem);
+}
+
+.filtertabs {
+  overflow: auto;
+}
+
+.filtertabs ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 6px;
+}
+
+.filtertabs ul li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border:2px solid rgb(81, 176, 205);
+  border-radius: 12px;
+  padding:5px;
+  margin-left:6px;
+}
+
+.filtertabs ul li i {
+  margin-right: 4px;
+  font-size: clamp(.4rem, 2vw, .8rem);
+}
+
+.filtertabs ul li p {
+  font-size: clamp(.4rem, 2vw, .8rem);
+  display: flex;
+}
+
+.tasks {
+  border-bottom: 1px solid gray;
+}
+
+.tasks ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks ul li {
+  display: flex;
+  justify-content: start;
+  align-items:center;
+  padding: 10px;
+  font-size: clamp(.4rem, 2vw, .8rem);
+}
+
+.checkbox {
+  margin-right: 5px;
+  background-color: yellow;
+  height:10px;
+  width:10px;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.details .tasks-title{
+  font-size:clamp(.4rem,2vw,.7rem);
+}
+.details .tasks-description{
+  font-size:clamp(.4rem,2vw,.6rem);
+}
+.checkbox i {
+  font-size: clamp(.6rem, 2vw, .7rem);
+  display: none;
+}
+
+.checkbox input {
+  display: inline-block;
+}
+
+.checkbox:hover i {
+  display: inline-block;
+}
+
+.advanced-search {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: clamp(.35rem, 2vw, .8rem);
+}
+.advanced-search p{
+    font-size: clamp(.5rem, 2vw, .7rem);
+}
+.advanced-search i {
+  margin-right: 2px;
+  font-size: clamp(.5rem, 2vw, .9rem);
+}

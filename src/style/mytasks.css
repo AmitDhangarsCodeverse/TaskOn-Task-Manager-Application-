@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Unbounded:wght@200..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  height: 30px;
+}
+
+.tasks-container {
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: #F7F5F4;
+
+}
+
+.tasks-container .current-task {
+  background-color: white;
+  height: auto;
+  width: auto;
+  border-radius: 12px;
+  border: 1px solid gray
+}
+
+.tasks-container .current-task .headings {
+  display: flex;
+  padding: 12px;
+  border-bottom: 1px solid gray;
+}
+
+.tasks-container .current-task .headings .curtask {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(.5rem, 2vw, 1.5rem);
+}
+
+.tasks-container .otherfields {
+  width: 80vw;
+}
+
+.tasks-container .otherfields ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tasks-container .otherfields ul li {
+  display: inline-flex;
+  padding: 4px;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: clamp(.35rem, 2vw, .7rem);
+  margin: 1px;
+}
+
+.tasks-container .tasks {}
+
+.tasks-container .tasks ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks-container .tasks ul li {
+  display: inline-flex;
+  font-size: clamp(.5rem, 2vw, .75rem);
+
+}
+
+.tasks .task {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.tasks .task .tasktitle {
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tasks .task .tasktitle p {
+  font-weight: 600;
+  font-size: clamp(.3rem, 2vw, .85rem);
+}
+
+.tasks .task .tasktitle .checkbox {
+  height: 20px;
+  width: 20px;
+  background-color: yellow;
+  border-radius: 100%;
+  border: 2px solid black;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tasks-container .tasks .task ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 77vw;
+}
+
+.tasks-container .tasks .task ul li {
+  font-size: clamp(.3rem, 2vw, .65rem)
+}
+
+.tasks-container .tasks .task ul .stage {
+  border: 2px solid rgb(0, 226, 0);
+  border-radius: 12px;
+  padding: 5px;
+  background-color: lightgreen;
+}
+
+.tasks-container .tasks .task ul .priorty {
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 12px;
+  padding: 5px;
+  background-color: rgb(224, 100, 100);
+}
+
+.tasks-container .tasks .task ul li img {
+  border-radius: 100%;
+  border: 2px solid black;
+}
+
+@media (min-width:320px) {
+  .tasks-container {
+    padding: 5px;
+  }
+
+  .tasks-container .current-task .headings {
+    padding: 5px;
+  }
+
+  .tasks-container .tasks .task {
+    padding: 4px;
+    overflow: hidden;
+  }
+
+  .tasks-container .tasks .task .checkbox {
+    height: 10px;
+    width: 10px;
+    border: 1px solid black;
+  }
+
+  .tasks-container .tasks .task .checkbox i {
+    font-size: 7px;
+  }
+
+  .tasks-container .tasks .task ul {
+    width: 67vw;
+  }
+}
+
+@media (min-width:768px) {
+  .tasks-container {
+    padding:10px;
+  }
+
+  .tasks-container .current-task .headings {
+    padding:10px;
+  }
+
+  .tasks-container .tasks .task {
+    padding:10px;
+  }
+
+  .tasks-container .tasks .task .checkbox {
+    height:20px;
+    width:20px;
+    border: 1px solid black;
+  }
+
+  .tasks-container .tasks .task .checkbox i {
+    font-size:15px;
+  }
+
+  .tasks-container .tasks .task ul {
+    width: 72vw;
+  }
+  .tasks-container .tasks .task ul li img{
+    height: 40px;
+  }
+}
+@media (min-width:1024px){
+  .tasks-container {
+    padding:10px;
+  }
+
+  .tasks-container .current-task .headings {
+    padding:10px;
+  }
+
+  .tasks-container .tasks .task {
+    padding:10px;
+  }
+
+  .tasks-container .tasks .task .checkbox {
+    height:20px;
+    width:20px;
+    border: 1px solid black;
+  }
+
+  .tasks-container .tasks .task .checkbox i {
+    font-size:15px;
+  }
+
+  .tasks-container .tasks .task ul {
+    width: 75vw;
+  }
+  .tasks-container .tasks .task ul li img{
+    height: 40px;
+  }
+}
