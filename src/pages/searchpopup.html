@@ -16,53 +16,16 @@
     />
   </head>
   <body>
-    <section>
+    <section class="searchpopup">
       <div class="addfilters">
-        <p class="addfiltersheading">Add Filters</p>
+        <p class="addfiltersheading">Search Tasks</p>
         <div class="filtertabs">
-          <ul>
-            <li>
-              <i class="ri-clipboard-line"></i>
-              <p>Project</p>
-            </li>
-            <li>
-              <i class="ri-checkbox-circle-line"></i>
-              <p>Deadline</p>
-            </li>
-            <li>
-              <i class="ri-list-check-3"></i>
-              <p>Type</p>
-            </li>
-            <li>
-              <i class="ri-user-5-line"></i>
-              <p>Assignee</p>
-            </li>
-          </ul>
+          <input type="text" name="searchinputdata" value="">
+          <i class="ri-search-line"></i>
         </div>
       </div>
       <div class="tasks">
         <ul>
-          <li>
-             <div class="checkbox"><i class="ri-check-double-line"></i></div>
-             <div class="details">
-              <p class="tasks-title">What is the main goal of this task?</p>
-              <p class="tasks-description">Clarifies the purpose and expected outcome.</p>
-            </div>
-          </li>
-          <li>
-            <div class="checkbox"><i class="ri-check-double-line"></i></div>
-            <div class="details">
-              <p class="tasks-title">What is the deadline?</p>
-              <p class="tasks-description">Helps prioritize and manage time.</p>
-            </div>
-          </li>
-          <li>
-           <div class="checkbox"><i class="ri-check-double-line"></i></div>
-            <div class="details">
-              <p class="tasks-title">What resources are needed?</p>
-              <p class="tasks-description">Ensures all tools and inputs are ready.</p>
-            </div>
-          </li>
         </ul>
       </div>
       <div class="advanced-search">
@@ -70,5 +33,6 @@
         <p>Advanced Search</p>
       </div>
     </section>
+    <script src="/dist/typescript/searchpopup.js" type="module"></script>
   </body>
 </html>

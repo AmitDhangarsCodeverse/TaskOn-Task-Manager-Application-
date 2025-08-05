@@ -11,8 +11,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 section {
@@ -23,7 +21,7 @@ section {
   position: absolute;
   z-index: 1;
   margin: 10px;
-  width: 50%;
+  width:98%;
   height: auto;
   border-radius: 12px;
   box-shadow: -1px -1px 1px 1px rgb(255, 11, 11);
@@ -66,9 +64,22 @@ section {
   font-size: clamp(.4rem, 2vw, .8rem);
 }
 
-.filtertabs ul li p {
-  font-size: clamp(.4rem, 2vw, .8rem);
+.filtertabs {
   display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.filtertabs input {
+  flex: 1;
+  margin:7px;
+  border:1px solid gray;
+  border-radius:8px;
+  padding-left: 5px;
+  box-shadow:-1px 1px 1px -1px gray;
+  outline:none;
+  height:30px;
+  font-size: clamp(.6rem, 2vw, .8rem);
 }
 
 .tasks {

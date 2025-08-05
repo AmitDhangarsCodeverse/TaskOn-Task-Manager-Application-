@@ -79,7 +79,6 @@ img {
 
 .menu-links ul :hover {
   background-color: #fcf8eb;
-  border-left: 3px solid #fae150;
 }
 
 .menu-links p {
@@ -101,7 +100,6 @@ img {
 
 .settings-and-logout ul :hover {
   background-color: #fcf8eb;
-  border-left: 3px solid #fae150;
 }
 
 .settings-and-logout li {

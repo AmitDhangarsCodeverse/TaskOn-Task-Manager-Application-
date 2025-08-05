@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  height: 50px;
+  border-radius: 100%;
+}
+
+.notification-container {
+  margin: 10px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: start;
+  flex-wrap: nowrap;
+  height: auto;
+  background-color: transparent;
+}
+
+.notification-container .latest-notification {
+  width: 50%;
+  border: 1px solid gray;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+.latest-notification .latest-notification-heading {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.latest-notification-heading h1 {
+  font-size: clamp(.7rem, 2vw, .9rem);
+}
+
+.latest-notification .notifications ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.latest-notification .notifications ul li {
+  display: inline-flex;
+  border: 1px solid black;
+  border-radius:10px;
+  margin:5px;
+  background-color: rgb(253, 239, 218);
+  font-size: clamp(.4rem, 2vw, .68rem);
+}
+
+.latest-notification .notifications ul .notification {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.notification-detail {
+  width: 50%;
+  border: 1px solid gray;
+  border-radius: 12px;
+  height: fit-content;
+  margin: 5px;
+}
+
+.notification-detail .notification-detail-heading {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.notification-detail-heading p {
+  font-size: clamp(.7rem, 2vw, .9rem);
+}
+
+.notification-detail .details {
+  margin: 10px;
+}
+
+.notification-detail .details ul {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.notification-detail .details ul li {
+  display: inline-flex;
+  width: 100%;
+  font-size: clamp(.4rem, 2vw, .68rem);
+
+}
+
+.notification-detail .details ul li .detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 2px;
+  padding: 2px;
+}
+
+.notification-detail .details ul li .detail i {
+  display: flex;
+}
+
+.notification-detail .details ul li .detail p {
+  display: flex;
+}
+
+.notification-detail .attachments .attachment-heading {
+  margin: 7px;
+  font-size: clamp(.7rem, 2vw, .9rem);
+}
+
+.notification-detail .attachment {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: clamp(.4rem, 2vw, .68rem);
+  margin: 5px;
+}
+.notification-detail .attachment input {
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid gray;
+  outline: none;
+  padding-left: 8px;
+}
+
+.notification-detail .attachment .attachbtn {
+  display: flex;
+  align-items: center;
+  font-size: clamp(.4rem, 2vw, .68rem);
+}
+
+.notification-detail .links .links-heading {
+  margin: 7px;
+  font-size: clamp(.7rem, 2vw, .9rem);
+}
+
+.notification-detail .link {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px;
+  font-size: clamp(.4rem, 2vw, .68rem);
+}
+
+.notification-detail .link input {
+  flex: 1;
+  border-radius:12px;
+  border: 1px solid gray;
+  outline: none;
+   padding-left: 8px;
+}
+
+.notification-detail .link .linkbtn {
+  display: flex;
+  align-items: center;
+  font-size: clamp(.4rem, 2vw, .68rem);
+}
+
+.notification-detail .saveBtn {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-detail .saveBtn p {
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 2px;
+  background-color: yellow;
+  font-size: clamp(.4rem, 2vw, .68rem);
+}
+
+@media (min-width:0px) {
+.notification-container{
+  flex-wrap: wrap;
+}
+.notification-container .latest-notification {
+  width: 100%;
+}
+.notification-container .notification-detail{
+  width: 100%;
+}
+}
+@media (min-width:768px){
+.notification-container{
+  flex-wrap: nowrap ;
+}
+.notification-container .latest-notification {
+  width: 100%;
+}
+.notification-container .notification-detail{
+  width: 100%;
+}
+}

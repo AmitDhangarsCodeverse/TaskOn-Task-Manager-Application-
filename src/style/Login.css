@@ -8,6 +8,7 @@
 
 img {
   -webkit-user-drag: none;
+  cursor:pointer;
 }
 
 .login-container {
@@ -106,17 +107,25 @@ img {
   padding: 10px;
   border: 2px solid black;
   border-radius: 23px;
+  cursor: pointer;
 }
 
 .continuebtn p {
   font-size: clamp(0.65rem, 1.5vw, 0.85rem);
   margin-right: 8px;
+  color:black;
 }
 
 .continuebtn a {
   text-decoration: none;
 }
 
+.error{
+ font-size: clamp(0.55rem, 1vw, 0.55rem);
+ color:rgb(235, 44, 44);
+ margin:2px;
+ padding:1px;
+}
 @media (min-width: 320px) {
   .login-container {
     padding: 5px;

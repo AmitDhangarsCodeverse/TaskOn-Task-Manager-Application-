@@ -17,9 +17,10 @@
   </head>
   <body>
     <section class="newtask-container">
+      <form>
       <div class="headerinput">
         <i class="ri-task-line"></i>
-        <input type="text" placeholder="Name of the Task" /><i
+        <input type="text" placeholder="Name of the Task" class="tasktitle" name="tasktitle" value=""/><i
           class="ri-close-line"
         ></i>
       </div>
@@ -31,8 +32,8 @@
           </div>
           <div class="left-side-field">
             <ul>
-              <li>today</li>
-              <li>tomorrow</li>
+              <li class="day" name="taskday" value="today">today</li>
+              <li class="day" name="taskday" value="tommorrow">tomorrow</li>
             </ul>
           </div>
         </div>
@@ -43,9 +44,9 @@
           </div>
           <div class="left-side-field">
             <ul>
-              <li>In 1 hour</li>
-              <li>In 2 hour</li>
-              <li><i class="ri-add-line"></i></li>
+              <li class="time" name="tasktime" value="1 hour">In 1 hour</li>
+              <li class="time" name="tasktime"  value="2 hour">In 2 hour</li>
+              <li class="time" name="tasktime"  value="3"><i class="ri-add-line"></i></li>
             </ul>
           </div>
         </div>
@@ -55,7 +56,7 @@
             <p>priority</p>
           </div>
           <div class="left-side-field">
-            <input type="text" placeholder="Enter your priority" />
+            <input type="text" placeholder="Enter your priority" class="taskpriorty" name="taskprioriry" value=""/>
           </div>
         </div>
         <div class="field field-4">
@@ -64,7 +65,7 @@
             <p>Tags</p>
           </div>
           <div class="left-side-field">
-            <input type="text" placeholder="Enter your Tags" />
+            <input type="text" placeholder="Enter your Tags" class="tasktags"  value="" name="tasktags"/>
           </div>
         </div>
         <div class="field field-5">
@@ -73,17 +74,20 @@
             <p>Assignee</p>
           </div>
           <div class="left-side-field">
-            <input type="text" placeholder="Enter your Assignee" />
+            <input type="text" placeholder="Enter your Assignee" class="taskassignee" value="" name="taskassignee" />
           </div>
         </div>
       </div>
       <div class="description">
        <p>Description</p>
-       <textarea name="" id="" placeholder="Write detailed description"></textarea>
+       <textarea id="" placeholder="Write detailed description" class="taskdescription"  name="taskdes" value=""></textarea>
       </div>
-      <div class="create-task">
-       <p>Create Task</p>
+      <div class="create-task" class="createtaskbtn">
+       <button type="submit">Create Task</button>
       </div>
+      </form>
     </section>
+    <script type="module" src="/dist/typescript/newtasks.js"></script>
+    <script type="module" src="/dist/typescript/dashboard.js"></script>
   </body>
 </html>

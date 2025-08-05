@@ -133,7 +133,7 @@ html {
  margin: 10px;
 }
 
-.create-task p {
+.create-task button {
  border: 1.5px solid black;
  padding: 5px;
  border-radius: 12px;
