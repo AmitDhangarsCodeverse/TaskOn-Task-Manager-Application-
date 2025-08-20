@@ -13,7 +13,7 @@ body {
 }
 
 img {
-  height: 50px;
+  height:35px;
   border-radius: 100%;
 }
 
@@ -41,23 +41,29 @@ img {
   align-items: center;
   border-bottom: 1px solid gray;
 }
-
-.latest-notification-heading h1 {
+.latest-notification .latest-notification-heading i {
+  cursor:pointer;
+}
+.latest-notification-heading p {
   font-size: clamp(.7rem, 2vw, .9rem);
+  font-family: "Unbounded", sans-serif;
 }
 
 .latest-notification .notifications ul {
   display: flex;
   flex-direction: column;
+  margin: 5px;
 }
 
 .latest-notification .notifications ul li {
   display: inline-flex;
   border: 1px solid black;
-  border-radius:10px;
-  margin:5px;
+  border-radius: 5px;
+  margin: 3.5px;
   background-color: rgb(253, 239, 218);
-  font-size: clamp(.4rem, 2vw, .68rem);
+  font-size: clamp(.4rem, 2vw, .65rem);
+  padding: 5px;
+  cursor: pointer;
 }
 
 .latest-notification .notifications ul .notification {
@@ -67,6 +73,14 @@ img {
   width: 100%;
 }
 
+.latest-notification .notifications ul .notification p {
+  font-family: "Unbounded", sans-serif;
+  font-size: clamp(.3rem, 1.5vw,.7rem);
+}
+
+.latest-notification .notifications ul .notification .titleanddescription p{
+  width: 60%;
+}
 .notification-detail {
   width: 50%;
   border: 1px solid gray;
@@ -83,8 +97,13 @@ img {
   border-bottom: 1px solid gray;
 }
 
+.notification-detail .notification-detail-heading i {
+  cursor: pointer;
+}
+
 .notification-detail-heading p {
-  font-size: clamp(.7rem, 2vw, .9rem);
+  font-size: clamp(.4rem, 1.5vw, .9rem);
+  font-family: "Unbounded", sans-serif;
 }
 
 .notification-detail .details {
@@ -115,15 +134,40 @@ img {
 
 .notification-detail .details ul li .detail i {
   display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 5px;
 }
 
 .notification-detail .details ul li .detail p {
   display: flex;
+  margin-left: 5px;
+}
+
+.detail-notification .assignee {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 2px;
+  padding: 2px;
+  font-size: clamp(.4rem, 2vw, .68rem);
+}
+
+.detail-notification .assignee i {
+  display: flex;
+  cursor: pointer;
+}
+
+.detail-notification .assignee p {
+  display: flex;
+  margin-left: 5px;
 }
 
 .notification-detail .attachments .attachment-heading {
   margin: 7px;
   font-size: clamp(.7rem, 2vw, .9rem);
+
 }
 
 .notification-detail .attachment {
@@ -132,24 +176,40 @@ img {
   align-items: center;
   font-size: clamp(.4rem, 2vw, .68rem);
   margin: 5px;
+  background-color: rgb(238, 231, 231);
+  padding: 15px;
+  border-radius: 8px;
 }
+
+.notification-detail .attachment i {
+  margin-right: 5px;
+  background-color: rgb(188, 183, 183);
+  padding: 4px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
 .notification-detail .attachment input {
   flex: 1;
-  border-radius: 12px;
+  border-radius: 5px;
   border: 1px solid gray;
   outline: none;
   padding-left: 8px;
+  padding: 5px;
+  font-size: clamp(.4rem, 2vw, .68rem);
 }
 
 .notification-detail .attachment .attachbtn {
   display: flex;
   align-items: center;
   font-size: clamp(.4rem, 2vw, .68rem);
+  margin-left: 3px;
 }
 
 .notification-detail .links .links-heading {
   margin: 7px;
   font-size: clamp(.7rem, 2vw, .9rem);
+  font-family: "Unbounded", sans-serif;
 }
 
 .notification-detail .link {
@@ -158,20 +218,33 @@ img {
   align-items: center;
   margin: 5px;
   font-size: clamp(.4rem, 2vw, .68rem);
+  background-color: rgb(238, 231, 231);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.notification-detail .link i {
+  margin-right: 5px;
+  background-color: rgb(230, 183, 88);
+  padding: 4px;
+  border-radius: 100%;
+  cursor: pointer;
 }
 
 .notification-detail .link input {
   flex: 1;
-  border-radius:12px;
   border: 1px solid gray;
   outline: none;
-   padding-left: 8px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: clamp(.4rem, 2vw, .68rem);
 }
 
 .notification-detail .link .linkbtn {
   display: flex;
   align-items: center;
   font-size: clamp(.4rem, 2vw, .68rem);
+  margin-left: 3px;
 }
 
 .notification-detail .saveBtn {
@@ -184,30 +257,36 @@ img {
 .notification-detail .saveBtn p {
   border: 1px solid black;
   border-radius: 12px;
-  padding: 2px;
+  padding: 4px;
   background-color: yellow;
   font-size: clamp(.4rem, 2vw, .68rem);
+  box-shadow: -2px 1px 1px 1px rgb(232, 232, 79);
 }
 
 @media (min-width:0px) {
-.notification-container{
-  flex-wrap: wrap;
+  .notification-container {
+    flex-wrap: wrap;
+  }
+
+  .notification-container .latest-notification {
+    width: 100%;
+  }
+
+  .notification-container .notification-detail {
+    width: 100%;
+  }
 }
-.notification-container .latest-notification {
-  width: 100%;
-}
-.notification-container .notification-detail{
-  width: 100%;
-}
-}
-@media (min-width:768px){
-.notification-container{
-  flex-wrap: nowrap ;
-}
-.notification-container .latest-notification {
-  width: 100%;
-}
-.notification-container .notification-detail{
-  width: 100%;
-}
+
+@media (min-width:768px) {
+  .notification-container {
+    flex-wrap: nowrap;
+  }
+
+  .notification-container .latest-notification {
+    width: 100%;
+  }
+
+  .notification-container .notification-detail {
+    width: 100%;
+  }
 }

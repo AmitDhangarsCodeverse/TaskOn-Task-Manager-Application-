@@ -5,22 +5,24 @@
   padding: 0;
   font-family: "Lexend", sans-serif;
 }
-img{
--webkit-user-drag:none;
-cursor: pointer;
-}
-i{
 
+img {
+  -webkit-user-drag: none;
+  cursor: pointer;
 }
+
+i {}
+
 .profile-container {
   background-color: white;
   height: auto;
-  width:auto;
+  width: auto;
   border: 1px solid black;
   margin: 10px;
   border-radius: 12px;
-  box-shadow:-1px -1px 2px 2px rgb(250, 145, 163);
+  box-shadow: -1px -1px 2px 2px rgb(250, 145, 163);
 }
+
 .profile-container .heading p {
   font-size: clamp(.8rem, 2vw, 1.5rem);
   border-bottom: 1px solid gray;
@@ -30,9 +32,9 @@ i{
 .profile-container .profile-photo {
   display: flex;
   align-items: center;
-  justify-content:start;
+  justify-content: start;
   padding: 15px;
-  border-bottom:1px solid gray;
+  border-bottom: 1px solid gray;
 
 }
 
@@ -41,99 +43,150 @@ i{
   border-radius: 12px;
   margin: 12px;
 }
-.profile-container .profile-photo .subheading{
-  font-size: clamp(.5rem,2vw,1rem);
+
+.profile-container .profile-photo .subheading {
+  font-size: clamp(.5rem, 2vw, 1rem);
   width: 20vw;
 }
-.profile-container .profile-photo p{
-  font-size: clamp(.4rem,2vw,.7rem);
+
+.profile-container .profile-photo p {
+  font-size: clamp(.4rem, 2vw, .7rem);
 }
-.profile-container .profile-photo .upload-btn .btn{
+
+.profile-container .profile-photo .upload-btn .btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  border:1px solid gray;
-  border-radius:12px;
+  border: 1px solid gray;
+  border-radius: 12px;
   padding: 3px;
-  margin-bottom :5px;
+  margin-bottom: 5px;
   cursor: pointer;
 }
-.profile-container .contact {
+
+.profile-container .username {
   display: flex;
-  padding: 10px;
+  padding: 5px;
   align-items: center;
-  border-bottom:1px solid gray;
+  border-bottom: 1px solid gray;
 }
-.profile-container .contact .subheading {
+
+.profile-container .username .subheading {
   padding: 10px;
   width: 20vw;
-   font-size: clamp(.5rem,2vw,1rem);
+  font-size: clamp(.5rem, 2vw, 1rem);
 }
-.profile-container .contact p{
-    font-size: clamp(.4rem,2vw,.7rem);
+
+.profile-container .username p {
+  font-size: clamp(.4rem, 2vw, .7rem);
 }
-.profile-container input{
-  font-size: clamp(.4rem,2vw,.7rem);
-  outline:none;
+
+.profile-container input {
+  font-size: clamp(.4rem, 2vw, .7rem);
+  outline: none;
   border: none;
   background-color: rgb(227, 220, 220);
-  border-radius:12px;
+  border-radius: 8px;
   padding: 5px;
   margin-top: 5px;
-  border:1px solid black;
+  border: 1px solid black;
 }
-.profile-container .emailcontainer{
+
+.profile-container .password {
+  display: flex;
+  padding:5px;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.profile-container .password .subheading {
+  padding:5px;
+  width: 20vw;
+  font-size: clamp(.5rem, 2vw, 1rem);
+}
+
+.profile-container .password p {
+  font-size: clamp(.4rem, 2vw, .7rem);
+}
+
+.profile-container .password-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20vw;
+}
+
+.profile-container .password-input-container input {
+  font-size: clamp(.2rem, 2vw, .7rem);
+  outline: none;
+  border: none;
+  background-color: rgb(227, 220, 220);
+  border-radius:8px;
+  border: 1px solid black;
+}
+
+.profile-container .emailcontainer {
   display: flex;
 }
-.profile-container .emailaddress{
+
+.profile-container .emailaddress {
   display: flex;
-  border-bottom:1px solid gray;
-  padding:20px;
-  
+  border-bottom: 1px solid gray;
+  padding: 20px;
+
 }
-.profile-container .emailcontainer i{
+
+.profile-container .emailcontainer i {
   display: none;
 }
-.profile-container .emailaddress .subheading{
+
+.profile-container .emailaddress .subheading {
   width: 20vw;
   padding: 10px;
-   font-size: clamp(.5rem,2vw,1rem);
+  font-size: clamp(.5rem, 2vw, 1rem);
 }
-.profile-container .emailaddress .changeaddress{
+
+.profile-container .emailaddress .changeaddress {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 70vw;
 }
+
 .profile-container .emailaddress .changeaddress p {
-  font-size: clamp(.4rem,2vw,.7rem);
+  font-size: clamp(.4rem, 2vw, .7rem);
 }
-.profile-container .emailaddress .changeaddress .email-btn{
+
+.profile-container .emailaddress .changeaddress .email-btn {
   border: 1px solid rgb(224, 218, 218);
   padding: 8px;
-  border-radius:15px;
-    cursor:pointer;
+  border-radius: 15px;
+  cursor: pointer;
 }
+
 .profile-container .buttons {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
-  border-bottom:1px solid gray;
+  border-bottom: 1px solid gray;
 
 }
-.profile-container .buttons p{
-  font-size: clamp(.4rem,2vw,.7rem);
-  cursor:pointer;
+
+.profile-container .buttons p {
+  font-size: clamp(.4rem, 2vw, .7rem);
+  cursor: pointer;
 }
-.buttons .cancelbtn{
-   border: 1px solid rgb(224, 218, 218);
+
+.buttons .cancelbtn {
+  border: 1px solid rgb(224, 218, 218);
   padding: 8px;
-  border-radius:15px;
+  border-radius: 15px;
 }
-.buttons .savechangesbtn{
-   border: 1px solid rgb(224, 218, 218);
+
+.buttons .savechangesbtn {
+  border: 1px solid rgb(224, 218, 218);
   padding: 8px;
-  border-radius:15px;
-  background-color:#FAE150;
+  border-radius: 15px;
+  background-color: #FAE150;
 }

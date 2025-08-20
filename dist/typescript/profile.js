@@ -9,10 +9,16 @@ const cancelBtn = document.querySelector(".cancelbtn");
 const uploadfield = document.querySelector(".uploadfield");
 const savechangesBtn = document.body.querySelector(".savechangesbtn");
 const nameFormcontainer = document.body.querySelector(".inputname-conatiner");
+// hidden / Visible Password ;
+const passwordInput = document.body.querySelector(".password-inputfield");
+const visibleIcon = document.body.querySelector(".ri-eye-line");
+const passwordSaver = document.body.querySelector(".password-validator");
+const passwordInputContainer = document.body.querySelector(".password-input-container");
 // global object for handling data;
 let profiledetails = {
     image: "",
     username: "",
+    password: "",
     emailaddress: "",
 };
 // Signatures
@@ -20,7 +26,18 @@ let handleCancel;
 let Imagevalidator;
 let handleSaveChanges;
 let handleoformValidation;
+let passwordShower;
 // functions
+passwordShower = () => {
+    passwordInput.type = "text";
+    let hiddenIcon = document.createElement("i");
+    hiddenIcon.className = "ri-eye-off-line";
+    visibleIcon.replaceWith(hiddenIcon);
+    hiddenIcon.addEventListener("click", () => {
+        passwordInput.type = "password";
+        hiddenIcon.replaceWith(visibleIcon);
+    });
+};
 handleCancel = () => {
     const orgimg = "https://img.freepik.com/premium-photo/fun-unique-cartoon-profile-picture-that-represents-your-style-personality_1283595-14213.jpg";
     profilePhoto.src = orgimg;
@@ -46,6 +63,12 @@ handleoformValidation = (data) => {
     if (data.username === "") {
         nameForm.style.border = "2px solid red";
     }
+    if (data.password === "") {
+        passwordInput.style.border = "2px solid red";
+    }
+    if (data.password) {
+        passwordInput.style.border = "0px solid red";
+    }
     if (data.image) {
         profilePhoto.style.border = "0px solid red";
         uploadBtn.style.border = "0px solid red";
@@ -56,7 +79,7 @@ handleoformValidation = (data) => {
     if (data.emailaddress) {
         changeEmail.style.border = "0px solid red";
     }
-    if (data.image && data.username && data.emailaddress) {
+    if (data.image && data.username && data.password && data.emailaddress) {
         return 1;
     }
 };
@@ -97,13 +120,24 @@ uploadBtn.addEventListener("click", () => {
 nameForm.addEventListener("click", () => {
     const saveName = document.body.querySelector(".ri-send-plane-line");
     saveName.addEventListener("click", () => {
-        if ((nameForm === null || nameForm === void 0 ? void 0 : nameForm.innerText) === "") {
+        if (nameForm) {
             const usernameHolder = document.createElement("p");
             usernameHolder.classList.add("usernameholder");
             usernameHolder.innerText = nameForm.value;
             profiledetails.username = usernameHolder.innerText;
             nameForm.replaceWith(usernameHolder);
             saveName.remove();
+        }
+    });
+});
+passwordInput.addEventListener("click", () => {
+    passwordSaver.addEventListener("click", () => {
+        const password = passwordInput.value;
+        if (password) {
+            profiledetails.password = password;
+            const passwordHolder = document.createElement("p");
+            passwordHolder.innerText = password;
+            passwordInputContainer.replaceWith(passwordHolder);
         }
     });
 });
@@ -133,3 +167,4 @@ savechangesBtn.addEventListener("click", () => {
         handleSaveChanges();
     }
 });
+visibleIcon.addEventListener("click", passwordShower);
