@@ -77,3 +77,16 @@ form.addEventListener("submit", (e) => {
   }
 });
 submitBtn.addEventListener("click", form.submit);
+
+// passwordshowerandhider
+const showericon = document.querySelector(".ri-eye-line")as HTMLElement;
+showericon.addEventListener("click",()=>{
+  passWord.type = "text";
+  let hiddenIcon = document.createElement("i") as HTMLElement;
+  hiddenIcon.className = "ri-eye-off-line";
+  showericon.replaceWith(hiddenIcon);
+  hiddenIcon.addEventListener("click", () => {
+    passWord.type = "password";
+    hiddenIcon.replaceWith(showericon);
+  });
+})

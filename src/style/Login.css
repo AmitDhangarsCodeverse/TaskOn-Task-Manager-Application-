@@ -6,9 +6,14 @@
   font-family: "Lexend", sans-serif;
 }
 
+html,
+body {
+  overflow: hidden;
+}
+
 img {
   -webkit-user-drag: none;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .login-container {
@@ -76,7 +81,27 @@ img {
 }
 
 .login-container .field-container {
-  padding: 10px 15px 10px 0px;
+  padding: 12px 8px 12px 0px;
+  overflow: hidden;
+}
+
+.login-container .field-container div {
+  border: none;
+  border-radius: 12px;
+  background-color: #f7f5f4;
+  width: 102%;
+  padding: 2px;
+  outline: none;
+  font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+  display: inline-flex;
+  align-items: center;
+}
+
+.login-container .field-container div i {
+  font-size: clamp(.8rem, 2vw, 1rem);
+  margin: 3px;
+  padding-right: 10px;
+  cursor: pointer;
 }
 
 .field-container label {
@@ -90,8 +115,8 @@ img {
   border: none;
   border-radius: 12px;
   background-color: #f7f5f4;
-  padding: 12px;
-  width: 100%;
+  padding: 18px;
+  width: 92%;
   outline: none;
   font-size: clamp(0.6rem, 1.5vw, 0.7rem);
   display: inline-block;
@@ -113,25 +138,30 @@ img {
 .continuebtn p {
   font-size: clamp(0.65rem, 1.5vw, 0.85rem);
   margin-right: 8px;
-  color:black;
+  color: black;
 }
 
 .continuebtn a {
   text-decoration: none;
 }
 
-.error{
- font-size: clamp(0.55rem, 1vw, 0.55rem);
- color:rgb(235, 44, 44);
- margin:2px;
- padding:1px;
+.error {
+  font-size: clamp(0.55rem, 1vw, 0.55rem);
+  color: rgb(235, 44, 44);
+  margin: 2px;
+  padding: 1px;
 }
+
 @media (min-width: 320px) {
   .login-container {
     padding: 5px;
     height: 105lvh;
     flex-direction: column;
     align-items: center;
+  }
+
+  .field-container input {
+    width: 90%;
   }
 
   .banner {

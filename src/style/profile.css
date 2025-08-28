@@ -6,6 +6,11 @@
   font-family: "Lexend", sans-serif;
 }
 
+html,
+body {
+  overflow: hidden;
+}
+
 img {
   -webkit-user-drag: none;
   cursor: pointer;
@@ -17,15 +22,33 @@ i {}
   background-color: white;
   height: auto;
   width: auto;
-  border: 1px solid black;
   margin: 10px;
   border-radius: 12px;
   box-shadow: -1px -1px 2px 2px rgb(250, 145, 163);
 }
 
-.profile-container .heading p {
-  font-size: clamp(.8rem, 2vw, 1.5rem);
+.profile-container .heading {
   border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.profile-container .heading .imagealongwithptofile {
+  height: 50px;
+}
+
+.profile-container .heading .profile-heading {
+  display: flex;
+}
+
+.profile-heading p {
+  font-size: clamp(.8rem, 2vw, 1.2rem);
+  padding: 10px;
+}
+
+.profile-container .edit-option p {
+  font-size: clamp(.8rem, 2vw, .85rem);
   padding: 10px;
 }
 
@@ -45,12 +68,11 @@ i {}
 }
 
 .profile-container .profile-photo .subheading {
-  font-size: clamp(.5rem, 2vw, 1rem);
-  width: 20vw;
+  font-size: clamp(.5rem, 2vw, .85rem);
 }
 
 .profile-container .profile-photo p {
-  font-size: clamp(.4rem, 2vw, .7rem);
+  font-size: clamp(.4rem, 2vw, .6rem);
 }
 
 .profile-container .profile-photo .upload-btn .btn {
@@ -66,6 +88,7 @@ i {}
 
 .profile-container .username {
   display: flex;
+  justify-content: start;
   padding: 5px;
   align-items: center;
   border-bottom: 1px solid gray;
@@ -73,12 +96,15 @@ i {}
 
 .profile-container .username .subheading {
   padding: 10px;
-  width: 20vw;
-  font-size: clamp(.5rem, 2vw, 1rem);
+  font-size: clamp(.5rem, 2vw, .85rem);
 }
 
 .profile-container .username p {
   font-size: clamp(.4rem, 2vw, .7rem);
+}
+
+.profile-container .username i {
+  font-size: clamp(.55rem, 2vw, .9rem);
 }
 
 .profile-container input {
@@ -94,26 +120,28 @@ i {}
 
 .profile-container .password {
   display: flex;
-  padding:5px;
+  padding: 5px;
+  justify-content: start;
   align-items: center;
   border-bottom: 1px solid gray;
 }
 
 .profile-container .password .subheading {
-  padding:5px;
-  width: 20vw;
-  font-size: clamp(.5rem, 2vw, 1rem);
+  padding: 5px;
+  font-size: clamp(.5rem, 2vw, .85rem);
 }
 
 .profile-container .password p {
   font-size: clamp(.4rem, 2vw, .7rem);
 }
-
+.profile-container .password i {
+  font-size: clamp(.55rem, 2vw, .9rem);
+  margin: 2px;
+}
 .profile-container .password-input-container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 20vw;
+  justify-content: space-around;
 }
 
 .profile-container .password-input-container input {
@@ -121,16 +149,18 @@ i {}
   outline: none;
   border: none;
   background-color: rgb(227, 220, 220);
-  border-radius:8px;
+  border-radius: 8px;
   border: 1px solid black;
 }
 
 .profile-container .emailcontainer {
   display: flex;
+  justify-content: start;
 }
 
 .profile-container .emailaddress {
   display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid gray;
   padding: 20px;
 
@@ -141,23 +171,33 @@ i {}
 }
 
 .profile-container .emailaddress .subheading {
-  width: 20vw;
   padding: 10px;
-  font-size: clamp(.5rem, 2vw, 1rem);
+  font-size: clamp(.5rem, 2vw, .85rem);
 }
 
 .profile-container .emailaddress .changeaddress {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70vw;
+  width: 80%;
 }
 
 .profile-container .emailaddress .changeaddress p {
-  font-size: clamp(.4rem, 2vw, .7rem);
+  font-size: clamp(.3rem, 2vw, .7rem);
+}
+
+.profile-container .emailaddress .changeaddress i {
+  margin: 1px;
 }
 
 .profile-container .emailaddress .changeaddress .email-btn {
+  border: 1px solid rgb(224, 218, 218);
+  padding: 8px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.profile-container .emailaddress .changeaddress .savechangesbtn {
   border: 1px solid rgb(224, 218, 218);
   padding: 8px;
   border-radius: 15px;
@@ -169,7 +209,6 @@ i {}
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid gray;
 
 }
 
@@ -182,6 +221,13 @@ i {}
   border: 1px solid rgb(224, 218, 218);
   padding: 8px;
   border-radius: 15px;
+  border: 2px solid red;
+}
+
+.buttons .cancelbtn:hover {
+  background-color: red;
+  color: white;
+  border: 1px solid black;
 }
 
 .buttons .savechangesbtn {
@@ -189,4 +235,100 @@ i {}
   padding: 8px;
   border-radius: 15px;
   background-color: #FAE150;
+  border: 2px solid rgb(235, 165, 0);
+}
+
+.buttons .savechangesbtn:hover {
+  background-color: red;
+  color: white;
+  border: 2px solid rgb(235, 165, 0);
+  background-color: rgb(255, 220, 20);
+}
+
+/* profile-updation-field */
+.profileupdated .updation-message {
+  background-color: white;
+  border-radius: 12px;
+  margin: 10px;
+  border: 2px solid green;
+  display: flex;
+  align-items: center;
+  width: auto;
+  box-shadow: -1px .5px .5px .5px green;
+}
+
+.updation-message {
+  color: green;
+  font-size: clamp(.4rem, 2vw, .7rem);
+}
+
+.updation-message img {
+  height: 40px;
+  border-radius: 100%;
+}
+
+.delete-account-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.delete-account-option p {
+  background-color: rgb(255, 83, 83);
+  margin: 5px;
+  border-radius: 8px;
+  border: 2px solid red;
+  font-size: clamp(.4rem, 2vw, .85rem);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.delete-account-option p :hover {
+  color: white;
+}
+
+.delete-account-option p {
+  background: rgb(232, 88, 88);
+  overflow: hidden;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px #ff9393e4;
+  font-size: clamp(.5rem, 2vw, .7rem);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.delete-account-option p:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px #ff3f3f;
+}
+
+.delete-account-option p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: rgb(227, 69, 7);
+  opacity: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.delete-account-option p:active::after {
+  animation: ripple 0.9s ease-out;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(30);
+  }
 }

@@ -5,29 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasks</title>
     <link rel="stylesheet" href="/src/style/mytasks.css" />
-     <link
+    <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
+    />
+     <link
+      rel="shortcut icon"
+      href="https://static.vecteezy.com/system/resources/previews/000/357/359/non_2x/task-vector-icon.jpg"
+      type="image/x-icon"
     />
   </head>
   <body>
     <section class="tasks-container">
-      <div class="current-task">
-        <div class="headings">
-          <div class="curtask"><p>Today</p></div>
-          <div class="otherfields">
-            <ul>
-              <li><p>Due Date</p></li>
-              <li><p>Stage</p></li>
-              <li><p>Priority</p></li>
-              <li><p>Team</p></li>
-              <li><p>Assignee</p></li>
-            </ul>
-          </div>
-        </div>
-        <div class="tasks"></div>
-        </div>
-      </div>
+      <table border="1">
+        <thead>
+          <tr>
+            <th><img src="https://cdn-icons-png.freepik.com/512/762/762686.png" alt="">Task Title</th>
+            <th><img src="https://cdn-icons-png.flaticon.com/512/10691/10691802.png" alt="">Due Date</th>
+            <th><img src="https://img.icons8.com/?size=192&id=63726&format=png" alt="">Stage</th>
+            <th><img src="https://cdn-icons-png.flaticon.com/512/5116/5116355.png" alt="">Priority</th>
+            <th><img src="https://cdn-icons-png.freepik.com/256/13160/13160094.png?semt=ais_white_label" alt="">Team</th>
+            <th><img src="https://cdn-icons-png.flaticon.com/512/1048/1048966.png" alt="">Assignee</th>
+            <th><img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt="">Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+    <!-- Dynamic data is inserted here -->
+        </tbody>
+      </table>
       <script type="module" src="/dist/typescript/mytasks.js"></script>
     </section>
   </body>

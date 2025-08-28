@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="/src/style/newtask.css">
   </head>
   <body>
+    <div class="taskadded"></div>
     <section class="newtask-container">
       <form>
       <div class="headerinput">
-        <i class="ri-task-line"></i>
+        <img src="https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/512/tasks.png" alt="">
         <input type="text" placeholder="Name of the Task" class="tasktitle" name="tasktitle" value=""/><i
           class="ri-close-line"
         ></i>
@@ -27,50 +28,57 @@
       <div class="fields">
         <div class="field field-1">
           <div class="right-side-field">
-            <i class="ri-time-line"></i>
-            <p>Day</p>
+           <img src="https://cdn-icons-png.freepik.com/512/9188/9188030.png" alt="">
+            <p>Due Date</p>
           </div>
           <div class="left-side-field">
-            <ul>
-              <li class="day" name="taskday" value="today">today</li>
-              <li class="day" name="taskday" value="tommorrow">tomorrow</li>
-            </ul>
+            <input type="date" name="" id="duedate">
           </div>
         </div>
         <div class="field field-2">
           <div class="right-side-field">
-            <i class="ri-notification-line"></i>
-            <p>Time</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/5521/5521277.png" alt="">
+            <p>Stage</p>
           </div>
           <div class="left-side-field">
-            <ul>
-              <li class="time" name="tasktime" value="1 hour">In 1 hour</li>
-              <li class="time" name="tasktime"  value="2 hour">In 2 hour</li>
-              <li class="time" name="tasktime"  value="3"><i class="ri-add-line"></i></li>
-            </ul>
+            <select name="" id="stage">
+              <option value="In Progress">In Progress</option>
+              <option value="Done">Done </option>
+              <option value="Not Yet">Not Yet</option>
+            </select>
           </div>
         </div>
         <div class="field field-3">
           <div class="right-side-field">
-            <i class="ri-list-check-3"></i>
+           <img src="https://cdn.iconscout.com/icon/free/png-256/free-priority-task-icon-svg-png-download-1361072.png" alt="">
             <p>priority</p>
           </div>
           <div class="left-side-field">
-            <input type="text" placeholder="Enter your priority" class="taskpriorty" name="taskprioriry" value=""/>
+             <select name="" id="priority">
+              <option value="High">High</option>
+              <option value="Moderate">Moderate </option>
+              <option value="Low">Low</option>
+            </select>
           </div>
         </div>
         <div class="field field-4">
           <div class="right-side-field">
-            <i class="ri-price-tag-line"></i>
-            <p>Tags</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/6020/6020347.png" alt="">
+            <p>Team</p>
           </div>
           <div class="left-side-field">
-            <input type="text" placeholder="Enter your Tags" class="tasktags"  value="" name="tasktags"/>
+           <select name="" id="team">
+            <option value="Development">Development</option>
+            <option value="Management">Management</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Finance">Finance</option>
+            <option value="Top Executive">Top Executive</option>
+           </select>
           </div>
         </div>
         <div class="field field-5">
           <div class="right-side-field">
-            <i class="ri-user-5-line"></i>
+            <img src="https://cdn-icons-png.flaticon.com/512/1048/1048966.png" alt="">
             <p>Assignee</p>
           </div>
           <div class="left-side-field">
@@ -79,11 +87,11 @@
         </div>
       </div>
       <div class="description">
-       <p>Description</p>
+       <p> <img src="https://cdn-icons-png.flaticon.com/512/5868/5868077.png" alt="">Description</p>
        <textarea id="" placeholder="Write detailed description" class="taskdescription"  name="taskdes" value=""></textarea>
       </div>
       <div class="create-task" class="createtaskbtn">
-       <button type="submit">Create Task</button>
+       <button type="submit"><img src="https://www.svgrepo.com/show/335051/create.svg" alt=""><p>Create Task</p></button>
       </div>
       </form>
     </section>

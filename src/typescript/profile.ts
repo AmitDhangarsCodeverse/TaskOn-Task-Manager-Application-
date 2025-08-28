@@ -1,5 +1,7 @@
 // Element Quering
-const profilePhoto = document.querySelector("img") as HTMLImageElement;
+const profilePhoto = document.querySelector(
+  ".uploaded-Profile-photo"
+) as HTMLImageElement;
 const uploadBtn = document.querySelector(".btn") as HTMLButtonElement;
 const nameForm = document.querySelector("input") as HTMLInputElement;
 const uploadbtn = document.body.querySelector(".upload-btn") as HTMLElement;
@@ -26,6 +28,10 @@ const passwordSaver = document.body.querySelector(
 const passwordInputContainer = document.body.querySelector(
   ".password-input-container"
 ) as HTMLElement;
+
+// profile Updation
+const ProfileUpdationContainer = document.body.querySelector(".profileupdated");
+
 // Interfaces
 interface Iprofile {
   image: string;
@@ -60,27 +66,17 @@ passwordShower = () => {
 };
 
 handleCancel = () => {
-  const orgimg =
-    "https://img.freepik.com/premium-photo/fun-unique-cartoon-profile-picture-that-represents-your-style-personality_1283595-14213.jpg";
-  profilePhoto.src = orgimg;
-  profilePhoto.insertAdjacentElement("afterend", uploadbtn);
-  // // Name
-  const username = document.body.querySelector(
-    ".usernameholder"
-  ) as HTMLElement;
-  username.replaceWith(nameForm);
-  // // Email
-  const emailAdd = document.body.querySelector(".emailadd") as HTMLElement;
-  emailAdd.innerText = "john.deere@gmail.com";
+  location.reload();
 };
 
 handleSaveChanges = () => {
+  location.reload();
   localStorage.setItem("ProfileCredentials", JSON.stringify(profiledetails));
+  window.location.reload();
 };
 
 handleoformValidation = (data: Iprofile): number => {
   if (data.image === "") {
-    profilePhoto.style.border = "2px solid red";
     uploadBtn.style.border = "2px solid red";
   }
   if (data.emailaddress === "") {
@@ -89,10 +85,10 @@ handleoformValidation = (data: Iprofile): number => {
   if (data.username === "") {
     nameForm.style.border = "2px solid red";
   }
-  if(data.password === ""){
+  if (data.password === "") {
     passwordInput.style.border = "2px solid red";
   }
-  if(data.password){
+  if (data.password) {
     passwordInput.style.border = "0px solid red";
   }
   if (data.image) {
@@ -161,7 +157,7 @@ nameForm.addEventListener("click", () => {
       usernameHolder.innerText = nameForm.value;
       profiledetails.username = usernameHolder.innerText;
       nameForm.replaceWith(usernameHolder);
-      saveName.remove();
+      saveName.replaceChildren("")
     }
   });
 });
@@ -184,7 +180,8 @@ const changeEmailfield = document.createElement("input");
 const changeEmailtext = document.createElement("p");
 const saveEmailbtn = document.createElement("div");
 saveEmailbtn.classList.add(".email-btn");
-changeEmailtext.innerText = "save changes";
+changeEmailtext.classList.add("savechangesbtn");
+changeEmailtext.innerHTML = `<i class="ri-database-2-line"></i> Save Changes`;
 saveEmailbtn.appendChild(changeEmailtext);
 
 changeEmail.addEventListener("click", () => {
@@ -205,7 +202,67 @@ cancelBtn.addEventListener("click", handleCancel);
 savechangesBtn.addEventListener("click", () => {
   if (handleoformValidation(profiledetails)) {
     handleSaveChanges();
+    // profile Updation
+    let updationMessage = document.createElement("p");
+    updationMessage.classList.add("updation-message");
+    updationMessage.innerHTML = `<img src = "https://i.pinimg.com/originals/0c/a2/a5/0ca2a5738a404e7800ee1f93dab9676a.gif"></img> Profile is successfully updated `;
+    if (!ProfileUpdationContainer?.firstElementChild) {
+      ProfileUpdationContainer?.appendChild(updationMessage);
+    }
   }
 });
 
 visibleIcon.addEventListener("click", passwordShower);
+
+// complete Profile
+const fetchedProfiledata = localStorage.getItem("ProfileCredentials");
+const profileFetched = JSON.parse(fetchedProfiledata);
+const ProfileContainer = document.body.querySelector(
+  ".profile-container"
+) as HTMLElement;
+if(profileFetched){
+  ProfileContainer.innerHTML = `<div class="heading">
+         <img src="https://assets-v2.lottiefiles.com/a/d4f46ebe-1180-11ee-a47a-d34b68ca717c/X1wAcRAuX0.gif" alt="" class="imagealongwithptofile">
+        <p>Profile</p>
+      </div>
+      <div class="profile-photo">
+        <i class="ri-image-line"></i>
+        <p class="subheading"> Profile photo</p>
+        <img
+          src=${profileFetched.image}
+          alt=""
+          class="uploaded-Profile-photo"
+        />
+      </div>
+      <div class="username">
+        <p class="subheading"><i class="ri-user-line"></i> Username</p>
+        <div class="fullname">
+        <p>${profileFetched.username}</p>
+        </div>
+      </div>
+      <div class="password">
+        <p class="subheading"><i class="ri-lock-password-line"></i> Password</p>
+        <div class="encrypted-password">
+          <p>${profileFetched.password}</p>
+        </div>
+      </div>
+      <div class="emailaddress">
+       
+        <p class="subheading"> <i class="ri-mail-ai-line"></i> E-mail Address</p>
+        <div class="changeaddress">
+          <div class="emailcontainer">
+            <p class="emailadd">${profileFetched.emailaddress}</p>
+            <i class="ri-send-plane-line"></i>
+          </div>
+        </div>
+      </div>
+      <div class="delete-account-option">
+       <p><i class="ri-delete-bin-line"></i> Delete Account</p>
+      </div>`;
+};
+const deleteAccount = document.body.querySelector(".delete-account-option") as HTMLElement;
+deleteAccount.addEventListener("click",()=>{
+ localStorage.removeItem("ProfileCredentials");
+ location.reload();
+ window.location.reload();
+})

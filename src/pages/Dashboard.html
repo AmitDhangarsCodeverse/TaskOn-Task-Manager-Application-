@@ -33,31 +33,31 @@
           </div>
           <div class="menu-links">
             <ul>
-              <li class="dashboardtab">
+             <a href="#search-bar"> <li class="dashboardtab">
                 <i class="ri-dashboard-line"></i>
                 <p>Dashboard</p>
-              </li>
-              <li class="mytaskstab">
+              </li></a>
+              <a href="#mytasks"><li class="mytaskstab">
                 <i class="ri-task-line"></i>
-                <p>My Tasks</p>
-              </li>
-              <li class="notificationtab">
+                <p>Tasks</p>
+              </li></a>
+              <a href="#notifications"><li class="notificationtab">
                 <i class="ri-notification-3-line"></i>
-                <p>Notification</p>
-              </li>
+                <p>Updates</p>
+              </li></a>
             </ul>
           </div>
         </div>
         <div class="settings-and-logout">
           <ul>
-            <li class="settingstab">
+            <a href="#settings"><li class="settingstab">
               <i class="ri-settings-3-line"></i>
               <p>Settings</p>
-            </li>
-            <li class="logouttab">
+            </li></a>
+           <a href="#logout"> <li class="logouttab">
               <i class="ri-logout-circle-line"></i>
               <p>Log out</p>
-            </li>
+            </li></a>
           </ul>
         </div>
       </div>
@@ -71,26 +71,27 @@
         </div>
         <div class="mobile-menu-links">
           <ul>
-            <li> <i class="ri-dashboard-line"></i>
-                <p>Dashboard</p></li>
-            <li><i class="ri-task-line"></i>
-                <p>My Tasks</p></li>
-            <li><i class="ri-notification-3-line"></i>
-                <p>Notification</p></li>
-            <li><i class="ri-settings-3-line"></i>
-              <p>Settings</p></li>
-            <li><i class="ri-logout-circle-line"></i>
-              <p>Log out</p></li>
+            <a href="#search-bar"><li> <i class="ri-dashboard-line"></i>
+                <p>Dashboard</p></li></a>
+            <a href="#mytasks"><li><i class="ri-task-line"></i>
+                <p>My Tasks</p></li></a>
+            <a href="#notifications"><li><i class="ri-notification-3-line"></i>
+                <p>Notification</p></li></a>
+            <a href="#settings"><li><i class="ri-settings-3-line"></i>
+              <p>Settings</p></li></a>
+            <a href="#logout"><li><i class="ri-logout-circle-line"></i>
+              <p>Log out</p></li></a>
           </ul>
           <i class="ri-arrow-up-wide-line"></i>
         </div>
         
       </div>
       <div class="dashboard">
-        <div class="search-bar-container">
+        <a class="back-to-top" href="#search-bar" aria-label="Back to top"><i class="ri-arrow-up-s-line"></i></a>
+        <div class="search-bar-container" id="search-bar">
           <i class="ri-menu-4-fill"></i>
           <div class="search-bar">
-            <input type="text" placeholder="Search your task" />
+            <input type="text" placeholder="Search your task" class="search-bar-input" />
             <i class="ri-search-2-line"></i>
           </div>
           <div class="profile-and-task-btn">
@@ -98,42 +99,32 @@
               <i class="ri-add-line"></i>
               <p>New Task</p>
             </div>
-            <div class="mails"><i class="ri-mail-line"></i></div>
+            <div class="mails"><i class="ri-mail-send-line"></i></div>
             <div class="profile">
               <img
                 src="https://img.freepik.com/premium-photo/fun-unique-cartoon-profile-picture-that-represents-your-style-personality_1283595-14213.jpg"
                 alt=""
+                class="dynamic-profile"
               />
             </div>
           </div>
         </div>
+        <iframe src="" frameborder="0" class="dynamic-outlet"></iframe>
         <div class="dashboard-components">
           <div class="mytasks">
             <div class="top-bar">
-              <h1>My tasks</h1>
+              <h1><img src="https://cdn.prod.website-files.com/642cdb132c5d45bcf6851404/649cc24a33fc4fe8fe1cfa85_overcoming%20the%20challenges%20of.png" alt=""> Recent Tasks</h1>
               <i class="ri-more-2-fill"></i>
             </div>
             <div class="tasks">
-              <div class="task">
-                <input type="checkbox" />
-                <p>Finish Monthly Reporting</p>
-                <p>Today</p>
-              </div>
-              <div class="task">
-                <input type="checkbox" />
-                <p>Finish Monthly Reporting</p>
-                <p>Today</p>
-              </div>
-              <div class="task">
-                <input type="checkbox" />
-                <p>Finish Monthly Reporting</p>
-                <p>Today</p>
-              </div>
+      <!-- Dynamic Data is Inputed here -->
             </div>
           </div>
           <div class="newcomments">
             <div class="top-comment-bar">
-              <h1>New Comments</h1>
+             
+              <h1> <img src="https://cdn-icons-png.freepik.com/512/9131/9131484.png" alt="">New Comments</h1>
+               <i class="ri-more-2-fill"></i>
             </div>
             <div class="comments">
               <div class="comment">
@@ -146,6 +137,11 @@
                 </div>
                 <i class="ri-arrow-right-s-line"></i>
               </div>
+              <div class="comment">
+             <div class="task-title"> Exclusive Deal: 50% Off on All Electronics</div>
+           <div class="task-description">Grab the latest gadgets at half the price! Limited-time offer valid until
+           Sunday. Don’t miss out on upgrading your tech for less.</div>
+            <i class="ri-arrow-right-s-line"></i></div>
               <div class="comment">
                 <div class="task-title">
                   I Tried Living Without Technology for 30 Days — Here’s What
@@ -180,11 +176,11 @@
               </div>
             </div>
           </div>
-          
         </div>
          <div class="mycategories">
           <div class="top-category-bar">
-            <h1>My Categories</h1>
+           
+            <h1> <img src="https://cdn-icons-png.freepik.com/256/9710/9710991.png?semt=ais_white_label" alt=""> My Categories</h1>
             <i class="ri-more-2-fill"></i>
           </div>
           <div class="categories">
@@ -195,7 +191,7 @@
               </div>
               <div class="profile">
                 <img
-                  src="https://static.vecteezy.com/system/resources/previews/020/389/525/non_2x/hand-drawing-cartoon-girl-cute-girl-drawing-for-profile-picture-vector.jpg"
+                  src="https://cdn-icons-png.freepik.com/256/3673/3673355.png?semt=ais_white_label"
                   alt=""
                 />
               </div>
@@ -207,7 +203,7 @@
               </div>
               <div class="profile">
                 <img
-                  src="https://static.vecteezy.com/system/resources/previews/020/389/525/non_2x/hand-drawing-cartoon-girl-cute-girl-drawing-for-profile-picture-vector.jpg"
+                  src="https://cdn-icons-png.flaticon.com/512/7051/7051035.png"
                   alt=""
                 />
               </div>
@@ -219,7 +215,7 @@
               </div>
               <div class="profile">
                 <img
-                  src="https://static.vecteezy.com/system/resources/previews/020/389/525/non_2x/hand-drawing-cartoon-girl-cute-girl-drawing-for-profile-picture-vector.jpg"
+                  src="https://cdn-icons-png.flaticon.com/512/6213/6213359.png"
                   alt=""
                 />
               </div>
@@ -231,7 +227,7 @@
               </div>
               <div class="profile">
                 <img
-                  src="https://static.vecteezy.com/system/resources/previews/020/389/525/non_2x/hand-drawing-cartoon-girl-cute-girl-drawing-for-profile-picture-vector.jpg"
+                  src="https://cdn-icons-png.flaticon.com/512/2083/2083439.png"
                   alt=""
                 />
               </div>
@@ -240,33 +236,28 @@
         </div>
         <div class="mytracking">
           <div class="top-tracking-bar">
-            <h1>My Tracking</h1>
+            <h1> <img src="https://cdn-icons-png.flaticon.com/512/7171/7171906.png" alt="">My Tracking</h1>
+             <i class="ri-more-2-fill"></i>
           </div>
           <div class="tracks">
-            <div class="track">
-              <i class="ri-time-line"></i>
-              <p>Create a Website</p>
-              <p>1 day ago</p>
+            <div class="track-headline">
+              <h6>Sr.no</h6><h6>Task Name</h6><h6>Date</h6><h6>Status</h6>
             </div>
-            <div class="track">
-              <i class="ri-time-line"></i>
-              <p>Create a Website</p>
-              <p>1 day ago</p>
-            </div>
-            <div class="track">
-              <i class="ri-time-line"></i>
-              <p>Create a Website</p>
-              <p>1 day ago</p>
-            </div>
-            <div class="track">
-              <i class="ri-time-line"></i>
-              <p>Create a Website</p>
-              <p>1 day ago</p>
-            </div>
+          <!-- Dynamic Data is inputed here -->
         </div>
       </div>
+      <h1  id="mytasks"><img src="https://cdn-icons-png.flaticon.com/512/747/747095.png" alt="">My tasks</h1>
+      <iframe src="mytasks.html" frameborder="0" class="mytasksoutlet"></iframe>
+      <h1 id="notifications"><img src="https://cdn-icons-png.flaticon.com/256/5625/5625789.png" alt="">Updates</h1>
+      <iframe src="updates.html" frameborder="0" class="notificationoutlet" ></iframe>
+      <h1 id="settings"><img src="https://cdn0.iconfinder.com/data/icons/apple-apps/100/Apple_Settings-512.png" alt="">Settings</h1>
+      <iframe src="settings.html" frameborder="0" class="settingsoutlet" ></iframe>
+      <h1  id="logout"><img src="https://cdn-icons-png.flaticon.com/512/12635/12635060.png" alt="">Logout</h1>
+      <iframe src="logout.html" frameborder="0" class="logoutoutlet"  ></iframe>
+      <div class="backtotop"><i class="ri-arrow-up-long-line"></i></div>
     </section>
     <script src="/dist/typescript/dashboard.js" type="module"></script>
     <script src="/dist/typescript/mobiileslider.js" type="module"></script>
+    <script src="/dist/typescript/searchpopup.js" type="module"></script>
   </body>
 </html>

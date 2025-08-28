@@ -11,6 +11,8 @@ body {
   height: 100%;
   width: 100%;
   padding: 2px;
+  overflow: hidden;
+  background-color: white;
 }
 
 .logout-section {
@@ -35,7 +37,9 @@ body {
 
 .logout-section .profile-detail ul {
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 
 .logout-section .profile-detail ul li {
@@ -49,6 +53,7 @@ body {
   border: 2px solid rgba(234, 10, 10, 0.587);
   border-radius: 5px;
   background-color: rgba(243, 7, 7, 0.617);
+  width: fit-content;
 }
 
 .logout-section .profile-detail ul .Username p {
@@ -65,6 +70,7 @@ body {
   border: 2px solid rgba(0, 128, 0, 0.539);
   background-color: rgba(25, 213, 25, 0.451);
   border-radius: 5px;
+    width: fit-content;
 }
 
 .logout-section .profile-detail ul .Passord p {
@@ -110,4 +116,5 @@ body {
 
 .logged-screen img {
   height: 180px;
+  border-radius: 12px;
 }

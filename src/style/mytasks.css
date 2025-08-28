@@ -12,132 +12,61 @@ html {
   width: 100%;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 img {
   height: 30px;
 }
 
 .tasks-container {
-  border: 1px solid black;
-  margin: 10px;
   border-radius: 12px;
-  padding: 10px;
   background-color: #F7F5F4;
-
+  overflow-y: hidden;
 }
 
-.tasks-container .current-task {
-  background-color: white;
-  height: auto;
-  width: auto;
-  border-radius: 12px;
-  border: 1px solid gray
-}
-
-.tasks-container .current-task .headings {
-  display: flex;
-  padding: 12px;
-  border-bottom: 1px solid gray;
-}
-
-.tasks-container .current-task .headings .curtask {
-  width: 20vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: clamp(.5rem, 2vw, 1.5rem);
-}
-
-.tasks-container .otherfields {
-  width: 80vw;
-}
-
-.tasks-container .otherfields ul {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.tasks-container .otherfields ul li {
-  display: inline-flex;
-  padding: 4px;
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 16px;
   border: 1px solid black;
-  border-radius: 15px;
-  font-size: clamp(.35rem, 2vw, .7rem);
-  margin: 1px;
-}
-
-.tasks-container .tasks {}
-
-.tasks-container .tasks ul {
-  display: flex;
-  flex-direction: column;
-}
-
-.tasks-container .tasks ul li {
-  display: inline-flex;
-  font-size: clamp(.5rem, 2vw, .75rem);
-
-}
-
-.tasks .task {
-  display: flex;
-  padding: 10px;
-  border-bottom: 1px solid gray;
-}
-
-.tasks .task .tasktitle {
-  width: 20vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tasks .task .tasktitle p {
-  font-weight: 600;
-  font-size: clamp(.3rem, 2vw, .85rem);
-}
-
-.tasks .task .tasktitle .checkbox {
-  height: 20px;
-  width: 20px;
-  background-color: yellow;
-  border-radius: 100%;
-  border: 2px solid black;
-  margin-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tasks-container .tasks .task ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 77vw;
-}
-
-.tasks-container .tasks .task ul li {
-  font-size: clamp(.3rem, 2vw, .65rem)
-}
-
-.tasks-container .tasks .task ul .stage {
-  border: 2px solid rgb(0, 226, 0);
   border-radius: 12px;
-  padding: 5px;
-  background-color: lightgreen;
+  overflow: hidden;
+  font-size: clamp(.35rem, 2vw, .8rem);
+  box-shadow: -2px -1px 1px 1px green;
 }
 
-.tasks-container .tasks .task ul .priorty {
-  border: 2px solid rgb(255, 0, 0);
-  border-radius: 12px;
-  padding: 5px;
-  background-color: rgb(224, 100, 100);
+th {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-weight: bold;
+  margin-left: 5px;
 }
 
-.tasks-container .tasks .task ul li img {
-  border-radius: 100%;
-  border: 2px solid black;
+td {
+  text-align: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
 }
+
+tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #726060;
+  transition: 0.2s ease-in;
+}
+
+
+tr:last-child td {
+  border-bottom: none;
+}
+
 
 @media (min-width:320px) {
   .tasks-container {
@@ -163,68 +92,113 @@ img {
     font-size: 7px;
   }
 
-  .tasks-container .tasks .task ul {
-    width: 67vw;
-  }
+  .tasks-container .tasks .task ul {}
+}
+
+th {
+  padding: 4px;
+}
+
+td {
+  padding: 3px;
+}
+
+th img {
+  height: 20px;
+}
+
+td img {
+  height: 15px;
 }
 
 @media (min-width:768px) {
   .tasks-container {
-    padding:10px;
+    padding: 10px;
   }
 
   .tasks-container .current-task .headings {
-    padding:10px;
+    padding: 10px;
   }
 
   .tasks-container .tasks .task {
-    padding:10px;
+    padding: 10px;
   }
 
   .tasks-container .tasks .task .checkbox {
-    height:20px;
-    width:20px;
+    height: 20px;
+    width: 20px;
     border: 1px solid black;
   }
 
   .tasks-container .tasks .task .checkbox i {
-    font-size:15px;
+    font-size: 15px;
   }
 
-  .tasks-container .tasks .task ul {
-    width: 72vw;
-  }
-  .tasks-container .tasks .task ul li img{
+  .tasks-container .tasks .task ul {}
+
+  .tasks-container .tasks .task ul li img {
     height: 40px;
+  }
+
+  th {
+    padding: 6px;
+  }
+
+  td {
+    padding: 8px;
+  }
+
+  th img {
+    height: 20px;
+  }
+
+  td img {
+    height: 15px;
   }
 }
-@media (min-width:1024px){
+
+@media (min-width:1024px) {
   .tasks-container {
-    padding:10px;
+    padding: 10px;
   }
 
   .tasks-container .current-task .headings {
-    padding:10px;
+    padding: 10px;
   }
 
   .tasks-container .tasks .task {
-    padding:10px;
+    padding: 10px;
   }
 
   .tasks-container .tasks .task .checkbox {
-    height:20px;
-    width:20px;
+    height: 20px;
+    width: 20px;
     border: 1px solid black;
   }
 
   .tasks-container .tasks .task .checkbox i {
-    font-size:15px;
+    font-size: 15px;
   }
 
-  .tasks-container .tasks .task ul {
-    width: 75vw;
-  }
-  .tasks-container .tasks .task ul li img{
+  .tasks-container .tasks .task ul {}
+
+  .tasks-container .tasks .task ul li img {
     height: 40px;
+  }
+
+  th {
+    padding: 16px;
+  }
+
+  td {
+    padding: 18px;
+  }
+
+  th img {
+    height: 28px;
+  }
+
+  td img {
+    height: 28px;
   }
 }

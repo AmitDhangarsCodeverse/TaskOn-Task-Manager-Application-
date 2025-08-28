@@ -10,6 +10,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow:hidden;
 }
 
 img {
@@ -70,19 +71,18 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  margin:5px;
 }
-
-.latest-notification .notifications ul .notification p {
-  font-family: "Unbounded", sans-serif;
-  font-size: clamp(.3rem, 1.5vw,.7rem);
+.latest-notification .notification .titleanddescription .notification-description{
+  font-size: clamp(.3rem, 1.2vw,.6rem);
+  margin-left: 5px;
 }
-
-.latest-notification .notifications ul .notification .titleanddescription p{
-  width: 60%;
+.latest-notification .notifications .titleanddescription .notification-title{
+   font-family: "Unbounded", sans-serif;
+  font-size: clamp(.3rem, 1.2vw,.8rem);
+   margin-left: 5px;
 }
 .notification-detail {
-  width: 50%;
   border: 1px solid gray;
   border-radius: 12px;
   height: fit-content;
@@ -262,6 +262,51 @@ img {
   font-size: clamp(.4rem, 2vw, .68rem);
   box-shadow: -2px 1px 1px 1px rgb(232, 232, 79);
 }
+
+.notification-detail .saveBtn p {
+  background: #f9c74f;
+  overflow: hidden;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px #d8b167;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notification-detail .saveBtn p:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px #d9a441;
+}
+
+.notification-detail .saveBtn p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: rgb(255, 255, 88);
+  opacity: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.notification-detail .saveBtn p:active::after {
+  animation: ripple 0.9s ease-out;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(30);
+  }
+}
+
 
 @media (min-width:0px) {
   .notification-container {
