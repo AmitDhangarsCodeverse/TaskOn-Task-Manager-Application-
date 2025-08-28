@@ -30,7 +30,6 @@ No frameworks, libraries, or build tools needed — just open your browser and g
 Here’s what the Task Manager can do for you:
 
 - 📌 **Add New Tasks** – Just type and hit add
-- ✅ **Mark Tasks as Complete or Incomplete**
 - 🗑️ **Delete Tasks** – Out of sight, out of mind
 - ✏️ **Edit Tasks** – Fix that typo or reword your goal
 - 🔍 **Filter Tasks** – View all, completed, or pending tasks
@@ -64,7 +63,7 @@ task-manager/
 1. **Download or Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/task-manager.git
+   git clone (https://github.com/AmitDhangarsCodeverse/TaskOn-Task-Manager-Application-)
    cd task-manager
    ```
 
