@@ -30,7 +30,7 @@ getfilteredList = () => {
     searchResultContainer.firstElementChild?.appendChild(result);
 
     // clear Searches
- const clearSearch = document.body.querySelector(".searchdelete-icon") as HTMLElement;
+ xconst clearSearch = document.body.querySelector(".searchdelete-icon") as HTMLElement;
  clearSearch.addEventListener("click",()=>{
   localStorage.removeItem("searchquery");
 })

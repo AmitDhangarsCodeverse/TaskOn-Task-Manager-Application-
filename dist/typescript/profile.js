@@ -31,12 +31,12 @@ let handleoformValidation;
 let passwordShower;
 // functions
 passwordShower = () => {
-    passwordInput.type = "text";
+    passwordInput.type = "password";
     let hiddenIcon = document.createElement("i");
     hiddenIcon.className = "ri-eye-off-line";
     visibleIcon.replaceWith(hiddenIcon);
     hiddenIcon.addEventListener("click", () => {
-        passwordInput.type = "password";
+        passwordInput.type = "text";
         hiddenIcon.replaceWith(visibleIcon);
     });
 };

@@ -26,7 +26,8 @@ getfilteredList = () => {
             </div>`;
         (_a = searchResultContainer.firstElementChild) === null || _a === void 0 ? void 0 : _a.appendChild(result);
         // clear Searches
-        const clearSearch = document.body.querySelector(".searchdelete-icon");
+        xconst;
+        clearSearch = document.body.querySelector(".searchdelete-icon");
         clearSearch.addEventListener("click", () => {
             localStorage.removeItem("searchquery");
         });
